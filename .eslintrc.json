@@ -1,0 +1,50 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "extends": [
+        "standard",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "plugin:jest/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint/eslint-plugin",
+        "import",
+        "jest",
+        "prettier"
+    ],
+    "settings": {
+        "ecmascript": 2019,
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
+        }
+    },
+    "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "no-useless-constructor": "off",
+        "@typescript-eslint/no-useless-constructor": "error",
+        "jest/expect-expect": 0,
+        "jest/no-identical-title": 0
+    },
+    "env": {
+        "node": true,
+        "jest/globals": true
+    },
+    "globals": {
+        "logger": true
+    },
+    "prettier/prettier": [
+        "error",
+        {
+            "endOfLine": "auto"
+        }
+    ]
+}

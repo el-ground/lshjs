@@ -1,0 +1,17 @@
+# Sample Google App Engine configuration file for GAE Deployment.
+service: node-service-starter
+runtime: nodejs16
+instance_class: F1
+entrypoint: node dist/src/index.js
+
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
+
+automatic_scaling:
+  target_cpu_utilization: 0.80
+  target_throughput_utilization: 0.80
+  max_concurrent_requests: 80
+  min_pending_latency: 2s
+  max_pending_latency: automatic

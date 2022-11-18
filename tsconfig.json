@@ -1,0 +1,70 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    "module": "esnext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // Import non-ES modules as default imports. -> set to false, since we're es module, and setting it will make things bad.
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    // skip typechecking libraries. 
+    "skipLibCheck": true,
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "strict": true,
+    // Disallow features that require cross-file information for emit.
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true, // typescript module
+    // Allow JSON import
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "rootDir": "./",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      // exmaple of directory aliases
+      "#src/*": [
+        "src/*"
+      ],
+      "#framework/*": [
+        "src/framework/*"
+      ],
+      "#util/*": [
+        "src/util/*"
+      ],
+      "#model/*": [
+        "src/model/*"
+      ],
+      "#methods/*": [
+        "src/methods/*"
+      ],
+      "#plugins/*": [
+        "src/plugins/*"
+      ],
+      "#temp/*": [
+        "temp/*"
+      ],
+      "#assets/*": [
+        "assets/*"
+      ],
+      "#data/*": [
+        "data/*"
+      ],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "scripts/**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "tsc-alias": {
+    "resolveFullPaths": true,
+  }
+}

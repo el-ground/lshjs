@@ -1,0 +1,31 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "eslint.workingDirectories": [
+      "./"
+    ],
+    "eslint.lintTask.options": ".eslintrc.json",
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+    ],
+    "eslint.format.enable": true,
+    "prettier.documentSelectors": [
+        "{.js, .jsx, .css, .ts, .tsx, .mjs, .json}"
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "eslint.alwaysShowStatus": true,
+}

@@ -1,0 +1,24 @@
+# Ignore everything by default
+*
+
+# Allow files explicitly
+!package.json
+!yarn.lock
+
+!dist/**
+!assets/**
+
+# ignore files within allowed files and directories
+*.test.js
+.gitignore
+.git
+*.swp
+*DS_Store
+
+# Explicitly allow current dir. `gcloud deploy` fails without it.
+!.
+
+
+# Dev related
+dist/src/examples/**
+dist/src/_archives/**
