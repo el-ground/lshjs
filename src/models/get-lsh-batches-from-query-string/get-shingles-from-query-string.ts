@@ -2,10 +2,9 @@ import hangul from 'hangul-js'
 
 export const getShinglesFromQueryString = (queryString: string): string[] => {
   const shingledTextDictionary: { [shingled: string]: null } = {}
-  const cleanedQueryString: string = queryString.replace(
-    /[\x00-\x2F|\x3A-\x40|\x5B-\x5E|\x60|\x7B-\x7F]/gm,
-    '',
-  )
+  const cleanedQueryString: string = queryString
+    .replace(/[\x00-\x2F|\x3A-\x40|\x5B-\x5E|\x60|\x7B-\x7F]/gm, '')
+    .toLowerCase()
 
   // shingle character bigrams
   for (
